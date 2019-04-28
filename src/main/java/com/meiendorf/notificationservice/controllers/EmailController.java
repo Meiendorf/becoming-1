@@ -25,7 +25,7 @@ public class EmailController {
     @Autowired
     private EmailValidatorService validatorService;
 
-    @PostMapping
+    @PostMapping("/")
     public String sendEmail(@RequestBody EmailRequest request) throws MessagingException {
         validatorService.validate(request);
         try {
